@@ -1,0 +1,49 @@
+<mvc:View controllerName="SimpleSmartForm.controller.SmartForm" 
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartField="sap.ui.comp.smartfield"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<smartForm:SmartForm 
+						id="__form1"
+						editable="false"
+						>
+						<smartForm:customToolbar>
+							<Toolbar height="3rem">
+								<Text text="Custom Toolbar with a header text" />
+								<ToolbarSpacer />
+								<Button press="onNextPress" icon="sap-icon://open-command-field" tooltip="next"/>
+							</Toolbar>
+						</smartForm:customToolbar>						
+						<smartForm:Group label="Smart Form Group 1">
+							<smartForm:GroupElement label="s_num">
+								<smartField:SmartField value="{s_num}" />
+							</smartForm:GroupElement>
+							<smartForm:GroupElement label="auart">
+									<smartField:SmartField value="{auart}" />	
+							</smartForm:GroupElement>
+							<smartForm:GroupElement label="ilart">
+									<smartField:SmartField value="{ilart}" />	
+							</smartForm:GroupElement>							
+						</smartForm:Group>
+						
+						<smartForm:Group label="Smart Form Group 2">
+							<smartForm:GroupElement label="tplnr">
+									<smartField:SmartField value="{tplnr}" />	
+							</smartForm:GroupElement>
+							<smartForm:GroupElement label="ktext">
+									<smartField:SmartField value="{ktext}" />	
+							</smartForm:GroupElement>
+							<smartForm:GroupElement label="job_title">
+									<smartField:SmartField value="{job_title}" />	
+							</smartForm:GroupElement>							
+						</smartForm:Group>
+
+					</smartForm:SmartForm>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
